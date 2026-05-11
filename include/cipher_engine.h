@@ -10,8 +10,8 @@
  * @brief AES暗号化の適用モード
  */
 enum class AesMode : uint8_t {
-    Mandatory = 0,  // 強制適用（先頭にAESを配置）
-    Disabled = 1,   // AES不使用（互換性・軽量用）
+    Disabled = 0,   // AES不使用（互換性・軽量用）
+    Mandatory = 1,  // 強制適用（先頭にAESを配置）
     Randomized = 2  // ランダム候補の一つとしてAESを追加
 };
 

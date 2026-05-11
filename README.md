@@ -2,9 +2,13 @@
 
 多段暗号化パイプラインとAES-GCMを組み合わせた、強力かつ柔軟な暗号化エンジン「TransCipher」の配布用パッケージです。
 
+## バージョン 2.0.0 (Major Update)
+C++版とPHP版の完全互換を達成しました。
+
 ## コンテンツ構成
 
-- **bin/**: 暗号化ツール本体 (`TransCipherApp.exe`) および実行に必要なライブラリ群。
+- **bin/**: GUIツール (`TransCipherApp.exe`)、CLIツール (`TransCipherCLI.exe`)、DLL等。
+- **php/**: (Ver.2.0 追加) PHP版エンジン本体。
 - **include/**: 開発者向けの公開APIヘッダーファイル。
 - **lib/**: 開発者向けのインポートライブラリ。
 
