@@ -27,6 +27,28 @@ C++版とPHP版の完全互換を達成しました。
 
 詳しいAPIの使用方法は、`include/cipher_engine.h` を参照してください。
 
+## PHP版エンジンの設定について
+
+Ver.2.0.0 より、PHP版エンジンはセキュリティ向上のため、暗号化・復号処理を外部のセキュアなAPIサーバーへ委譲する仕様に変更されました。
+本パッケージに含まれる [php/CipherEngine.php](file:///D:/prog/C++/TransCipher_Dist/php/CipherEngine.php) をそのまま動かすには、以下の手順で API トークンを設定する必要があります。
+
+### 1. API トークンの取得
+以下のトークン発行ゲートウェイページへアクセスし、**「アクセストークンを発行する」** ボタンをクリックして専用のアクセストークンを発行してください。
+
+* **トークン取得URL**: [https://streamers-tool.sakura.ne.jp/TransCipher/](https://streamers-tool.sakura.ne.jp/TransCipher/)
+
+![トークン作成画面](doc/CreateToken.png)
+
+### 2. ソースコードの書き換え
+発行されたトークンをコピーし、[php/CipherEngine.php](file:///D:/prog/C++/TransCipher_Dist/php/CipherEngine.php) 内の **24行目** にある `$apiToken` の値を書き換えて保存します。
+
+```php
+// php/CipherEngine.php 24行目付近
+private static $apiToken = "YOUR_API_TOKEN_HERE"; // ← "YOUR_API_TOKEN_HERE" を取得したトークンに書き換えます
+```
+
+これで、PHP版の暗号化・復号エンジンが正常に動作するようになります。
+
 ## 仕様
 
 ### 公開インターフェース
