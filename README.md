@@ -87,3 +87,14 @@ private static $apiToken = "YOUR_API_TOKEN_HERE"; // ← "YOUR_API_TOKEN_HERE" �
 > Copyright (c) 2026 BLUE000.
 
 ※ アプリケーション全体の著作権者（あなた）と、ライブラリの著作権者（BLUE000）が区別できるよう、混同を避ける形で記載してください。
+
+## サードパーティ・ライセンス
+
+本ソフトウェアの一部（`bin/TransCipherApp.exe`）は、The Qt Companyによって開発された **Qtライブラリ（LGPLv3）** を使用しています。
+Qtは動的リンクの形態で使用されており、利用者はLGPLv3の規約に基づき、本ソフトウェアで使用されているQtライブラリを任意の互換性のあるバージョンと差し替えて利用・デバッグする権利を有します。
+
+* **Qt公式サイト**: [https://www.qt.io/](https://www.qt.io/)
+* **GNU LGPLv3 ライセンス全文**: [https://www.gnu.org/licenses/lgpl-3.0.html](https://www.gnu.org/licenses/lgpl-3.0.html)
+* **著作権表記**:
+  > Qt is licensed under the GNU Lesser General Public License (LGPL) version 3.
+  > Copyright (C) 2024 The Qt Company Ltd and other contributors.
