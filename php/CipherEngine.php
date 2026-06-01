@@ -36,15 +36,16 @@ class CipherEngine {
     /**
      * APIサーバーへリクエストを送信してデータを暗号化する
      */
-    public static function encrypt(string $data, string $key, int $mode = RecipeManager::MODE_MANDATORY): ?string {
+    public static function encrypt(string $data, string $key, int $mode = RecipeManager::MODE_MANDATORY, string $version = "1.0"): ?string {
         if (empty($key)) return null;
 
         $response = self::sendRequest([
-            'action' => 'encrypt',
-            'token'  => self::$apiToken,
-            'key'    => $key,
-            'data'   => base64_encode($data),
-            'mode'   => $mode
+            'action'  => 'encrypt',
+            'token'   => self::$apiToken,
+            'key'     => $key,
+            'data'    => base64_encode($data),
+            'mode'    => $mode,
+            'version' => $version
         ]);
 
         if ($response && isset($response['status']) && $response['status'] === 'success') {
