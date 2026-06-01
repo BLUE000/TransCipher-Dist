@@ -35,9 +35,9 @@ public:
     static CipherResult decrypt(const QByteArray& data, const QString& key);
 
 private:
-    static const int HEADER_BLOCK_SIZE = 32;
+    static const int HEADER_BLOCK_SIZE = 64;
     static const char* MAGIC_NUMBER; // "TCF"
-    static const char* VERSION_INFO; // "1.0"
+    static const char* VERSION_INFO; // "2.0"
 };
 
 #endif // CIPHER_ENGINE_H
