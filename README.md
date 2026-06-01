@@ -75,7 +75,12 @@ private static $apiToken = "YOUR_API_TOKEN_HERE"; // ← "YOUR_API_TOKEN_HERE" �
   本ソフトウェアは知的財産保護およびリバースエンジニアリング防止のための技術であり、外為法および関連する安全保障貿易管理における**「輸出規制（リスト規制）」の制限対象となる暗号機能には抵触しない（非該当である）**と判断しています。したがって、本ライブラリを組み込んだアプリケーションを国内外へ配布・公開するにあたり、これら輸出管理規則の違反や抵触を懸念する必要はありません。
 
 
-## クレジット表記について（開発者向け）
+## ライセンス
+
+本プロジェクトは独自ライセンス（Proprietary License）を採用しています。
+本ソフトウェアに対するリバースエンジニアリング、逆アセンブル、逆コンパイル等は原則として禁止します。ただし、本ソフトウェアが利用している LGPLv3 ライセンスの対象物（Qtライブラリ）の修正やデバッグを目的とした、法令および LGPLv3 に基づいて認められる範囲のリバースエンジニアリング行為については、この制限から除外されます。
+
+### クレジット表記について（開発者向け）
 
 本ソフトウェアを自身のアプリケーションに組み込んで配布する場合、アプリケーション内の「バージョン情報」や「ライセンス一覧」等に、以下のいずれかの形式で権利表記を行ってください。
 
@@ -88,13 +93,15 @@ private static $apiToken = "YOUR_API_TOKEN_HERE"; // ← "YOUR_API_TOKEN_HERE" �
 
 ※ アプリケーション全体の著作権者（あなた）と、ライブラリの著作権者（BLUE000）が区別できるよう、混同を避ける形で記載してください。
 
-## サードパーティ・ライセンス
+### サードパーティ・ライセンス (Third-Party Licenses)
 
-本ソフトウェアの一部（`bin/TransCipherApp.exe`）は、The Qt Companyによって開発された **Qtライブラリ（LGPLv3）** を使用しています。
-Qtは動的リンクの形態で使用されており、利用者はLGPLv3の規約に基づき、本ソフトウェアで使用されているQtライブラリを任意の互換性のあるバージョンと差し替えて利用・デバッグする権利を有します。
+本ソフトウェアの一部（`bin/TransCipherApp.exe`）および `bin/TransCipher.dll` は、オープンソース版の **Qt 6 (LGPLv3)** を動的リンク（Dynamic Link）の形式で利用しています。
+本ソフトウェアを第三者に配布または利用する際は、LGPLv3のライセンス条項に従ってください。
+利用者はLGPLv3の規約に基づき、本ソフトウェアで使用されているQtライブラリを任意の互換性のあるバージョンと差し替えて利用・デバッグする権利を有します。
 
-* **Qt公式サイト**: [https://www.qt.io/](https://www.qt.io/)
+* **Qt 6 (LGPLv3)**: The Qt Company 等によって開発されています。詳細は [Qt 公式サイト](https://www.qt.io/) を参照してください。
 * **GNU LGPLv3 ライセンス全文**: [https://www.gnu.org/licenses/lgpl-3.0.html](https://www.gnu.org/licenses/lgpl-3.0.html)
 * **著作権表記**:
   > Qt is licensed under the GNU Lesser General Public License (LGPL) version 3.
   > Copyright (C) 2024 The Qt Company Ltd and other contributors.
+
